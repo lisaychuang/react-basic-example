@@ -11,6 +11,9 @@ const extractSass = new ExtractTextPlugin({
 module.exports = {
     entry: path.join(__dirname, '/src/index.jsx'),
     devtool: 'cheap-module-source-map',
+    resolve: {
+      extensions: ['.js', '.jsx']
+    },
     module: {
         loaders: [
             {
